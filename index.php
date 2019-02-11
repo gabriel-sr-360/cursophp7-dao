@@ -33,10 +33,15 @@ echo $user;*/
 //echo $user;
 
 //FAZENDO UPDATE
-$usuario = new Usuario();
-$usuario->loadById(6);
+//$usuario = new Usuario();
+//$usuario->loadById(7);
+//$usuario->update("aluno", "845632");
+//echo $usuario;
 
-$usuario->update("Professor", "852369");
-
+//FAZENDO UM DELETE
+$usuario = new Usuario(11);
+$usuario->loadById(11);
+$usuario->delete();
 echo $usuario;
+
  ?>
