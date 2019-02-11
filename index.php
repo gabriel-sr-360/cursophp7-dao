@@ -2,10 +2,41 @@
 
 require_once ("config.php");
 
-$sql = new Sql();
+/* Listar Usuario pelo ID
+$usuario = new Usuario();
+$usuario->loadById(1);
+echo $usuario;
+*/
 
-$usuarios = $sql->select("SELECT *FROM 	tb_usuarios");
+//Carregar Lista de Usuários
+//$lista = Usuario::listUsuarios();
+//echo json_encode($lista);
 
-echo json_encode($usuarios);
+/*Carregar Lista de Usuários buscando pelo Login
+$search =  Usuario::search('ot');
+echo json_encode($search);
+*/
 
+/*Autenticar Usuário
+$user = new Usuario();
+$login = "root";
+$senha = "159753";
+$user->login($login, $senha);
+
+echo $user;*/
+
+//Inserir Dados
+//$login = "Fernando360";
+//$senha = "55662522";
+//$user = new Usuario($login, $senha );
+//$user->inserirUsuario();
+//echo $user;
+
+//FAZENDO UPDATE
+$usuario = new Usuario();
+$usuario->loadById(6);
+
+$usuario->update("Professor", "852369");
+
+echo $usuario;
  ?>
